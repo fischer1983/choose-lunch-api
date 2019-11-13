@@ -35,7 +35,7 @@ public class VotacaoService {
 		repository.save(votacao);
 	}
 	
-	private void validarVotacao(Colaborador colaborador, Restaurante restaurante, Date data) throws Exception {
+	public void validarVotacao(Colaborador colaborador, Restaurante restaurante, Date data) throws Exception {
 		boolean colaboradorJaVotouHoje = colaboradorJaVotouNaData(colaborador, data);
 		boolean restauranteJaEscolhidoNaSemana = restauranteJaEscolhidoNaSemanaPorData(restaurante.getId(), data);  
 		
